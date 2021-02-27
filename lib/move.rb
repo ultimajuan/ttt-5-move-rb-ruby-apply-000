@@ -1,9 +1,18 @@
-def display_board(board)
-  puts " #{board[0]} | #{board[1]} | #{board[2]} "
+def display_board(bday)
+  puts " #{bday[0]} | #{bday[1]} | #{bday[2]} "
   puts "-----------"
-  puts " #{board[3]} | #{board[4]} | #{board[5]} "
+  puts " #{bday[3]} | #{bday[4]} | #{bday[5]} "
   puts "-----------"
-  puts " #{board[6]} | #{board[7]} | #{board[8]} "
+  puts " #{bday[6]} | #{bday[7]} | #{bday[8]} "
 end
 
 # code your input_to_index and move method here!
+
+def input_to_index(index)
+  new_index = index.to_i
+  new_index -= 1
+end
+
+def move(board, index, character = "X")
+  board[index] = character
+end
